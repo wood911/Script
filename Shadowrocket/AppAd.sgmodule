@@ -1,0 +1,17 @@
+#!name=App-AD净化
+#!desc=App去广告
+#!author = wood911
+#!homepage = https://github.com/wood911/Script/blob/main/README.md
+#!url=https://raw.githubusercontent.com/wood911/Script/main/Shadowrocket/AppAd.sgmodule
+
+[URL Rewrite]
+########## 广告请求拦截 ##########
+
+[Script]
+# Combat Master战后广告去除
+#hostname = eafe8.playfabapi.com
+CombatMaster = type=http-response,script-path= https://raw.githubusercontent.com/wood911/Script/main/combatad.js,pattern= ^https:\/\/eafe8\.playfabapi\.com\/Client\/GetTitleData,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+
+[MITM]
+hostname = %APPEND% eafe8.playfabapi.com
