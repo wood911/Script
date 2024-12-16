@@ -6,6 +6,16 @@
 
 [URL Rewrite]
 ########## 广告请求拦截 ##########
+# 山茶录
+^https?:\/\/.*\.pglstatp-toutiao\.com\/.+ - reject
+^https?:\/\/.*\.pangolin-sdk-toutiao.*\.com\/.+ - reject
+^https?:\/\/lf-cdn-tos\.bytescm\.com\/.+ - reject
+^https?:\/\/toblog\.ctobsnssdk\.com\/.+ - reject
+^https?:\/\/p1\.meituan\.net\/.+ - reject
+^https?:\/\/m3\.d\.meituan\.net\/.+ - reject
+^https?:\/\/.*\.meituan\.com\/.+ - reject
+^https?:\/\/.*sign\.douyinpic\.com\/.+ - reject
+^https?:\/\/cap-rta-toc\.wldmarket\.com\/.+ - reject
 
 [Script]
 # Combat Master战后广告去除
@@ -14,4 +24,4 @@ CombatMaster = type=http-response,script-path= https://raw.githubusercontent.com
 
 
 [MITM]
-hostname = %APPEND% eafe8.playfabapi.com
+hostname = %APPEND% eafe8.playfabapi.com, *.pglstatp-toutiao.com, *.pangolin-sdk-toutiao*.com, lf-cdn-tos.bytescm.com, toblog.ctobsnssdk.com, *.meituan.net, *.meituan.com, .*sign.douyinpic.com, cap-rta-toc.wldmarket.com
